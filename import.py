@@ -1,8 +1,10 @@
 # import triple into neo4j from csv file downloaded from dbpedia
 import csv
 from py2neo import neo4j, node, rel, cypher
+# your database service
 graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
 
+# csv file
 ifile = open("College.csv","rb")
 reader = csv.reader(ifile)
 graph_db.clear()
